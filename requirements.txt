@@ -1,0 +1,27 @@
+# Query-variation construction (data_construction/).
+# The baseline repositories bring their own, heavier environments - follow the
+# upstream READMEs of AdaRAGUE (spaCy + Elasticsearch + torch) and Search-o1
+# (vLLM). The extra packages they need are listed at the bottom for reference.
+
+numpy
+pandas
+tqdm
+
+# LLM query rewriting
+openai>=1.0
+backoff
+
+# noise injection / grammar-error validation
+nlpaug
+language-tool-python
+
+# --- additionally required by the baselines ----------------------------------
+# torch
+# transformers
+# datasets
+# spacy                 # python -m spacy download en_core_web_sm
+# beir                  # BM25 index building (prep_elastic.py)
+# elasticsearch==7.17.9 # client matching the 7.17.9 server
+# faiss-gpu             # Contriever index
+# vllm                  # Search-o1 generation
+# scipy

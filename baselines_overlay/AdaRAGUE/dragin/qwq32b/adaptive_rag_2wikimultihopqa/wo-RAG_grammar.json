@@ -1,0 +1,14 @@
+{
+    "model_name_or_path": "Qwen/QwQ-32B",
+    "method": "non-retrieval",
+    "dataset": "2wikimultihopqa",
+    "data_path": "<QR_ROOT>/baselines/AdaRAGUE/data/adaptive_rag_2wikimultihopqa/test_grammar.csv",
+    "fewshot": 6,
+    "sample": 1000,
+    "shuffle": false,
+    "generate_max_length": 64,
+    "query_formulation": "direct",
+    "output_dir": "./result_final/qwq32b_adaptive_rag_2wikimultihopqa",
+    "es_index_name": "wiki",
+    "use_counter": true
+}

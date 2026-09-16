@@ -1,0 +1,13 @@
+{
+    "model_name_or_path": "meta-llama/Llama-3.1-8B-Instruct",
+    "method": "non-retrieval",
+    "dataset": "squad",
+    "data_path": "<QR_ROOT>/baselines/AdaRAGUE/data/adaptive_rag_squad/test.csv",
+    "fewshot": 6,
+    "sample": 1000,
+    "shuffle": false,
+    "generate_max_length": 64,
+    "query_formulation": "direct",
+    "output_dir": "./result_contriever_dense/Llama_3.1_8B_Instruct_squad",
+    "use_counter": true
+}

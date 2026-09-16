@@ -1,0 +1,18 @@
+# cloned baseline repositories (see baselines_overlay/README.md)
+/baselines/
+
+# data and experiment output
+/processed_data/
+/datasets/
+/indexes/
+/results/
+/hf_release/
+
+# python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# cluster / run logs
+slurm-*.out
+nohup.out

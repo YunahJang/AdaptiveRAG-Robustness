@@ -1,0 +1,22 @@
+{
+    "model_name_or_path": "meta-llama/Llama-3.1-8B-Instruct",
+    "method": "dragin",
+    "dataset": "squad",
+    "data_path": "<QR_ROOT>/baselines/AdaRAGUE/data/adaptive_rag_squad/test.csv",
+    "fewshot": 6,
+    "sample": 1000,
+    "shuffle": false,
+    "generate_max_length": 64,
+    "query_formulation": "real_words",
+    "retrieve_keep_top_k": 25,
+    "output_dir": "./result_contriever_dense/Llama_3.1_8B_Instruct_squad",
+    "retriever": "Contriever",
+    "contriever_model_name_or_path": "facebook/contriever",
+    "contriever_faiss_index_path": "<QR_ROOT>/indexes/contriever_psgs_w100_fp16_stream/index.faiss",
+    "contriever_meta_file_path": "<QR_ROOT>/indexes/contriever_psgs_w100_fp16_stream/meta.jsonl",
+    "contriever_max_query_length": 256,
+    "retrieve_topk": 3,
+    "hallucination_threshold": 0.6,
+    "check_real_words": true,
+    "use_counter": true
+}

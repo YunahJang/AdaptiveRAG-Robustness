@@ -1,0 +1,14 @@
+{
+    "model_name_or_path": "meta-llama/Llama-3.1-8B-Instruct",
+    "method": "non-retrieval",
+    "dataset": "triviaqa",
+    "data_path": "<QR_ROOT>/baselines/AdaRAGUE/data/adaptive_rag_triviaqa/test_grammar.csv",
+    "fewshot": 6,
+    "sample": 1000,
+    "shuffle": false,
+    "generate_max_length": 64,
+    "query_formulation": "direct",
+    "output_dir": "./result_final/Llama_3.1_8B_Instruct_adaptive_rag_triviaqa",
+    "es_index_name": "wiki",
+    "use_counter": true
+}
