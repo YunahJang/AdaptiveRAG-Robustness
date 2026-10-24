@@ -11,6 +11,7 @@
 
 <a href="https://arxiv.org/abs/2604.10745"><img src="https://img.shields.io/badge/arXiv-2604.10745-b31b1b.svg?logo=arxiv&logoColor=white" alt="arXiv"></a>
 <a href="https://yunahjang.github.io/howyouaskmatters"><img src="https://img.shields.io/badge/Project-Page-4f46e5.svg?logo=googlechrome&logoColor=white" alt="Project Page"></a>
+<a href="https://huggingface.co/datasets/YunahJang/query-robustness"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-query--robustness-ffcc4d.svg" alt="Hugging Face dataset"></a>
 <a href="https://2026.emnlp.org/"><img src="https://img.shields.io/badge/EMNLP-2026-0ea5e9.svg" alt="EMNLP 2026"></a>
 <a href="#licensing-and-attribution"><img src="https://img.shields.io/badge/Data-CC%20BY--SA%204.0-16a34a.svg" alt="Data license"></a>
 <a href="https://github.com/YunahJang/AdaptiveRAG-Robustness/stargazers"><img src="https://img.shields.io/github/stars/YunahJang/AdaptiveRAG-Robustness?style=social" alt="GitHub stars"></a>
@@ -280,7 +281,15 @@ Robustness is read off these per-run scores: the same command is repeated for ev
 
 ## 📦 Data
 
-The benchmark contains model-generated query variations and human-written rewrites constructed from six QA datasets. Questions are the 500-question subsamples (`dev_500_subsampled`) distributed by [Adaptive-RAG](https://github.com/starsuzi/Adaptive-RAG); the gold answers are identical across every form of a question, so any change in system output is attributable to the query surface form alone.
+The benchmark is released on Hugging Face: **[`YunahJang/query-robustness`](https://huggingface.co/datasets/YunahJang/query-robustness)**.
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset("YunahJang/query-robustness")
+```
+
+It contains model-generated query variations and human-written rewrites constructed from six QA datasets. Questions are the 500-question subsamples (`dev_500_subsampled`) distributed by [Adaptive-RAG](https://github.com/starsuzi/Adaptive-RAG); the gold answers are identical across every form of a question, so any change in system output is attributable to the query surface form alone.
 
 `data_construction/build_final_dataset.py` assembles the release files (one JSONL per benchmark, plus a combined file). Each record holds:
 
